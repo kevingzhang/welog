@@ -1,0 +1,17 @@
+<template name="modal">
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="index"}}
+  {{/contentFor}}
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Modal</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+      <div class="padding">
+        <button class="button button-large button-stable" data-ion-modal="_myModal">Open Modal</button>
+      </div>
+    {{/ionContent}}
+  {{/ionView}}
+
+</template>

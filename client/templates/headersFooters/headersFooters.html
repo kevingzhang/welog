@@ -1,0 +1,25 @@
+<template name="headersFooters">
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="index"}}
+  {{/contentFor}}
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Headers &amp; Footers</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionSubheaderBar}}
+      <h2 class="title">Subheader</h2>
+    {{/ionSubheaderBar}}
+
+    {{#ionContent}}
+      <div class="padding">
+        Content goes here
+      </div>
+    {{/ionContent}}
+
+    {{#ionFooterBar class="bar-dark"}}
+      <h1 class="title">Footer</h1>
+    {{/ionFooterBar}}
+  {{/ionView}}
+
+</template>

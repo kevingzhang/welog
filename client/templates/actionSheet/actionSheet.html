@@ -1,0 +1,19 @@
+<template name="actionSheet">
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="index"}}
+  {{/contentFor}}
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Action Sheet</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+      <div class="padding">
+        <button class="button button-large button-stable" data-action="showActionSheet">
+          Show Action Sheet
+        </button>
+      </div>
+    {{/ionContent}}
+  {{/ionView}}
+</template>

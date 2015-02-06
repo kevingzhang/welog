@@ -1,0 +1,35 @@
+$positive: #DE4F4F;
+
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionic-sass/ionic';
+@import '.meteor/local/build/programs/server/assets/packages/meteoric_ionicons-sass/ionicons';
+
+.ionic-body.platform-android {
+  font-family: "Roboto", sans-serif;
+
+  h1, h2, h3, h4, h5, h6,
+  .h1, .h2, .h3, .h4, .h5, .h6 {
+    font-family: "Roboto", sans-serif;
+  }
+
+  .tab-item {
+    font-family: "Roboto", sans-serif;
+  }
+}
+
+.popover {
+  height: auto;
+}
+
+.item p {
+  margin-bottom: 0;
+}
+
+.item-button-left, .item-button-right {
+  button {
+    top: 16px;
+  }
+}
+
+.loading-container .loading {
+  font-size: 25px;
+}

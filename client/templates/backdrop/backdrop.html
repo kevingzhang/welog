@@ -1,0 +1,19 @@
+<template name="backdrop">
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="index"}}
+  {{/contentFor}}
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Backdrop</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+      <div class="padding">
+        <button class="button button-large button-stable" data-action="showBackdrop">
+          Show Backdrop (1s)
+        </button>
+      </div>
+    {{/ionContent}}
+  {{/ionView}}
+</template>
