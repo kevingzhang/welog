@@ -4,7 +4,6 @@
 # but you can also edit it by hand.
 
 meteor-platform
-autopublish
 insecure
 accounts-password
 fourseven:scss
@@ -20,3 +19,7 @@ meteoric:ionic
 meteoric:autoform-ionic
 useraccounts:ionic
 coffeescript
+<<<<<<< HEAD
+=======
+reywood:publish-composite
+>>>>>>> FETCH_HEAD

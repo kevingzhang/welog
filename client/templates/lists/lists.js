@@ -1,9 +1,13 @@
+
 Template.lists.helpers({
-  times: function () {
-    var times = [];
-    _(20).times(function(n){
-      times.push(n);
-    });
-    return times;
+  posts: function() {
+    return Posts.find();
+  },
+
+  getuser: function(authorId) {
+  	console.log ("authorId is ", authorId);
+  	var u = Meteor.users.findOne({_id: authorId});
+  	console.log ("u is ", u);
+  	return u;
   }
 });

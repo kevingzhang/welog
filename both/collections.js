@@ -1,3 +1,4 @@
+
 Posts = new Mongo.Collection('posts');
 
 Posts.attachSchema(new SimpleSchema({
@@ -27,5 +28,11 @@ Posts.attachSchema(new SimpleSchema({
       autoValue: function() {
         return new Date;
       }
+<<<<<<< HEAD
+=======
+  },
+  authorId:{
+    type: String,
+>>>>>>> FETCH_HEAD
   }
 }));
