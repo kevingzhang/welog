@@ -1,0 +1,25 @@
+<template name="postView">
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="index"}}
+  {{/contentFor}}
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Post View</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+
+          {{#ionItem buttonRight=true avatar=true}}
+
+            <img src="https://randomuser.me/api/portraits/thumb/men/27.jpg">
+            <h2>John Smith</h2>
+            <p>
+              (555) 555-1212
+            </p>
+            <button class="button button-positive">{{> ionIcon icon="ios-telephone"}}</button>
+
+          {{/ionItem}}
+
+    {{/ionContent}}
+  {{/ionView}}
+</template>
