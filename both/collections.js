@@ -24,5 +24,8 @@ Posts.attachSchema(new SimpleSchema({
   },
   time:{
     type:Date
+  },
+  uid:{
+    type: String,
   }
 }));
