@@ -56,4 +56,10 @@ Router.map(function() {
       return tmp_test;
     }
   });
+  this.route('editPost', {
+    path: '/editPost/:_id',
+    data: function(){
+      return Posts.findOne(this.params._id);
+    }
+  });
 });

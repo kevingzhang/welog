@@ -1,0 +1,16 @@
+<template name="editPost">
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="index"}}
+  {{/contentFor}}
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Edit Post</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+      {{> quickForm collection="Posts" fields="title, body, published" doc=this id="edit-post" type="update" buttonContent="Save Post"}}
+    {{/ionContent}}
+  {{/ionView}}
+  
+</template>
