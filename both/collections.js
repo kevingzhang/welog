@@ -21,5 +21,8 @@ Posts.attachSchema(new SimpleSchema({
     autoform: {
       type: 'toggle'
     }
+  },
+  time:{
+    type:Date
   }
 }));
