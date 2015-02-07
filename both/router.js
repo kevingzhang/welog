@@ -47,6 +47,9 @@ Router.map(function() {
   this.route('userAccounts');
   this.route('postView', {
     path: '/postView/:_id',
+    subscriptions:function(){
+      Meteor.subscribe('post', this.params._id);
+    },
     data: function(){
       var tmp_test = Posts.findOne(this.params._id);
       console.log(tmp_test);

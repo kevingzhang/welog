@@ -28,11 +28,10 @@ Posts.attachSchema(new SimpleSchema({
       autoValue: function() {
         return new Date;
       }
-<<<<<<< HEAD
-=======
+
   },
   authorId:{
     type: String,
->>>>>>> FETCH_HEAD
+    optional:true  //Finally we have to remove this line when we ask users to login to post blog.
   }
 }));
