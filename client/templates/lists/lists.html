@@ -11,15 +11,16 @@
     {{#ionContent}}
       {{#ionList}}
 
-        {{#each times}}
+        {{#each posts}}
 
           {{#ionItem buttonRight=true avatar=true}}
 
             <img src="https://randomuser.me/api/portraits/thumb/men/27.jpg">
-            <h2>John Smith</h2>
+            <h2>{{title}}</h2>
             <p>
-              (555) 555-1212
+              {{body}}
             </p>
+            {{time}}
             <button class="button button-positive">{{> ionIcon icon="ios-telephone"}}</button>
 
           {{/ionItem}}
