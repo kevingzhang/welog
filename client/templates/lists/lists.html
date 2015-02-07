@@ -1,10 +1,10 @@
 <template name="lists">
 
   {{#contentFor "headerTitle"}}
-    <h1 class="title">Lists</h1>
+    <h1 class="title">Post List</h1>
   {{/contentFor}}
   {{#contentFor "headerButtonRight"}}
-    <button class="button button-clear" onclick="alert('TODO')">Edit</button>
+    <button class="button button-clear" onclick="alert('TODO')">Login</button>
   {{/contentFor}}
 
   {{#ionView}}
@@ -15,13 +15,13 @@
 
           {{#ionItem buttonRight=true avatar=true}}
 
-            <img src="https://randomuser.me/api/portraits/thumb/men/27.jpg">
+            <img src="http://4.bp.blogspot.com/-Gs63thLilSE/T9UMpkqKvXI/AAAAAAAAEOs/h2sGmqQQnL4/s1600/default_user_icon-dc6cdc7f01bcc60a4d6c3523377a1098-770007.jpg">
             <h2>{{title}}</h2>
             <p>
-              {{body}}
+              {{time}}
             </p>
-            {{time}}
-            <button class="button button-positive">{{> ionIcon icon="ios-telephone"}}</button>
+            
+            <button class="button button-clear">{{> ionIcon icon="chevron-right"}}</button>
 
           {{/ionItem}}
 
