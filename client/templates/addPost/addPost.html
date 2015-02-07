@@ -9,7 +9,7 @@
 
   {{#ionView}}
     {{#ionContent}}
-      {{> quickForm collection="Posts" doc=post id="edit-form" type="update" buttonContent="Save Post"}}
+      {{> quickForm collection="Posts" fields="title, body, published" id="add-post" type="insert" buttonContent="Save Post"}}
     {{/ionContent}}
   {{/ionView}}
   
