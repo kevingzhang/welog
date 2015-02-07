@@ -22,7 +22,7 @@ Router.map(function() {
       };
     }
   });
-  this.route('addpost')
+  this.route('addpost');
   this.route('headersFooters');
   this.route('lists');
   this.route('loading');
