@@ -24,7 +24,10 @@ Posts.attachSchema(new SimpleSchema({
     }
   },
   time:{
-    type:Date
+    type: Date,
+      autoValue: function() {
+        return new Date;
+      }
   },
   authorId:{
     type: String,
