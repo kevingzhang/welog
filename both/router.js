@@ -39,8 +39,8 @@ Router.map(function() {
   this.route('tabs.three', {path: '/tabs/three', layoutTemplate: 'tabsLayout'});
   this.route('tabs.four', {path: '/tabs/four', layoutTemplate: 'tabsLayout'});
   this.route('userAccounts');
-  this.route('postview', {
-    path: '/postview/:_id',
+  this.route('postView', {
+    path: '/postView/:_id',
     data: function(){
       var tmp_test = Posts.findOne(this.params._id);
       console.log(tmp_test);
