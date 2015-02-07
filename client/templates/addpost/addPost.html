@@ -1,0 +1,16 @@
+<template name="addpost">
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="index"}}
+  {{/contentFor}}
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Add Post</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+      {{> quickForm collection="Posts" fields="title, body, published" id="add-post" type="insert" buttonContent="Save Post"}}
+    {{/ionContent}}
+  {{/ionView}}
+  
+</template>
