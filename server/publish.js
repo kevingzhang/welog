@@ -2,11 +2,13 @@
 Meteor.publishComposite('Posts', {
     find: function() {
         // Find top ten highest scoring posts
+        console.log('posts publish');
         return Posts.find({}, { sort: { score: -1 }, limit: 100 });
     },
     children: [
         {
             find: function(post) {
+                console.log('inside children', post, post.authorId);
                 // Find post author. Even though we only want to return
                 // one record here, we use "find" instead of "findOne"
                 // since this function should return a cursor.

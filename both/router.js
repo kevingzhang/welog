@@ -13,8 +13,9 @@ Meteor.startup(function () {
 
 Router.map(function() {
 //  this.route('index', {path: '/'});
-  this.route('lists', {path: '/', subscribe: function() {
+  this.route('lists', {path: '/', subscriptions: function() {
     // Client
+    console.log("ready to sub Posts");
     Meteor.subscribe('Posts');
   }});
   this.route('actionSheet');
