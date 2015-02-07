@@ -4,10 +4,9 @@ Template.lists.helpers({
     return Posts.find();
   },
 
-  getuser: function(uid) {
-  	console.log ("uid is ", uid);
-  	var users = Meteor.users.find().fetch();
-  	var u = users[uid];
+  getuser: function(authorId) {
+  	console.log ("authorId is ", authorId);
+  	var u = Meteor.users.findOne({_id: authorId});
   	console.log ("u is ", u);
   	return u;
   }

@@ -1,5 +1,10 @@
 Meteor.startup ()->
 
+  if Meteor.users.find().count() is 0
+    for i in [0..10]
+      Accounts.createUser
+        username: Fake.sentence().substr(0, 5)
+
   if Posts.find().count() is 0
     for i in [0..10]
       usersArray = Meteor.users.find().fetch()

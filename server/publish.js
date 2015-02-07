@@ -12,7 +12,7 @@ Meteor.publishComposite('Posts', {
                 // since this function should return a cursor.
                 return Meteor.users.find(
                     { _id: post.authorId },
-                    { limit: 1, fields: { profile: 1, username: 1, picture: 1 } });
+                    { fields: { createdAt: 1, username: 1, picture: 1 } });
             }
         },
     ]

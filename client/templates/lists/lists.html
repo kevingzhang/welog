@@ -14,13 +14,13 @@
         {{#each posts}}
 
           {{#ionItem buttonRight=true avatar=true}}
-            {{#with getuser uid}}
+            {{#with getuser authorId}}
 
               <img src="{{picture.thumbnai}}"> 
               
               <h2>{{../title}}</h2>
               <p>
-                {{username}} &nbsp; {{../../time}}
+                {{username}} &nbsp; {{../time}}
               </p>
 
             {{/with}}

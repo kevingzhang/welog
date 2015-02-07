@@ -1,3 +1,4 @@
+
 Posts = new Mongo.Collection('posts');
 
 Posts.attachSchema(new SimpleSchema({
@@ -25,7 +26,7 @@ Posts.attachSchema(new SimpleSchema({
   time:{
     type:Date
   },
-  uid:{
+  authorId:{
     type: String,
   }
 }));
