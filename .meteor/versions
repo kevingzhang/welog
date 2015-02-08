@@ -13,6 +13,7 @@ blaze-tools@1.0.2
 boilerplate-generator@1.0.2
 callback-hook@1.0.2
 check@1.0.4
+chrismbeckett:toastr@2.1.0
 coffeescript@1.0.5
 ddp@1.0.14
 deps@1.0.6
