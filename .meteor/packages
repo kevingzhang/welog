@@ -6,7 +6,6 @@
 meteor-platform
 insecure
 accounts-password
-fourseven:scss
 iron:router
 zimme:iron-router-active
 anti:fake
@@ -20,3 +19,4 @@ meteoric:autoform-ionic
 useraccounts:ionic
 coffeescript
 reywood:publish-composite
+fourseven:scss
