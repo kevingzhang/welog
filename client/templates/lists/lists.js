@@ -4,9 +4,9 @@ Template.lists.helpers({
     return Posts.find();
   },
 
-  getuser: function(authorId) {
-  	console.log ("authorId is ", authorId);
-  	var u = Meteor.users.findOne({_id: authorId});
+  getuser: function() {
+    console.log('this', this);
+  	var u = Meteor.users.findOne({_id: this.authorId});
   	console.log ("u is ", u);
   	return u;
   }
@@ -19,4 +19,4 @@ Template.lists.events({
 		console.log(postid);
 		Router.go('/postView/'  +  postid);
 	}
-})
+});

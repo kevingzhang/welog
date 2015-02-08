@@ -1,7 +1,7 @@
 <template name="lists">
 
   {{#contentFor "headerButtonLeft"}}
-    {{>ionNavBackButton text=" " icon="compose" path="addpost"}}
+    <!--{{>ionNavBackButton text=" " icon="compose" path="addpost"}}-->
   {{/contentFor}}
   {{#contentFor "headerTitle"}}
     <h1 class="title">Welog</h1>
@@ -9,11 +9,16 @@
 
 
   {{#contentFor "headerButtonRight"}}
-      {{#if currentUser}}
-        {{>ionNavBackButton text=" " icon="ios-person" path="addpost"}}
-      {{else}}
-        {{>ionNavBackButton text=" " icon="ios-person-outline" path="userAccounts"}}
-      {{/if}}
+
+
+  <button class="button button-clear" id="showProfileMenu">
+    {{#if currentUser}}
+        <i class="icon ion-ios-person"></i>
+    {{else}}
+        <i class="icon ion-ios-person-outline"></i>
+    {{/if}}
+  </button>
+
   {{/contentFor}}
 
 
@@ -24,9 +29,9 @@
         {{#each posts}}
 
           {{#ionItem buttonRight=true avatar=true}}
-            {{#with getuser authorId}}
+            {{#with getuser}}
 
-              <img src="{{picture.thumbnai}}"> 
+              <img src="{{picture.thumbnail}}">
               
               <h2>{{../title}}</h2>
               <p>
