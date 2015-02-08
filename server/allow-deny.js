@@ -1,6 +1,9 @@
 Posts.allow({
   insert: function (userId, doc) {
     // the user must be logged in, and the document must be owned by the user
+    console.log("userId is ", userId);
+    console.log("authorId is ", doc.authorId);
+
     return (userId && doc.authorId === userId);
   },
   update: function (userId, doc, fields, modifier) {
