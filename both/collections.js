@@ -33,6 +33,9 @@ Posts.attachSchema(new SimpleSchema({
   authorId:{
     type: String,
       autoValue: function() {
+        if(this.isUpdate){
+          return;
+        }
         console.log(Meteor.user()._id);
         return Meteor.user()._id;
       }

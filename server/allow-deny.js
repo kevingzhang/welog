@@ -19,7 +19,10 @@ Posts.allow({
 Posts.deny({
   update: function (userId, docs, fields, modifier) {
     // can't change owners
+    console.log('authorId is', docs.authorId);
+    console.log('fields is', fields);
     return _.contains(fields, 'authorId');
+
   },
   remove: function (userId, doc) {
     // can't remove locked documents
