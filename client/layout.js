@@ -16,7 +16,8 @@ Template.layout.events({
                 buttonClicked: function (index) {
                     if (index === 0) {
                         Meteor.logout(function(){
-                            alert('User logged out');
+//                            alert('User logged out');
+                            toastr.success("Successfully logged out!");
                             Router.go('lists');
                         });
                     }
