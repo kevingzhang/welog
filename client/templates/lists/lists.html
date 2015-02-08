@@ -1,5 +1,8 @@
 <template name="lists">
 
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="addpost"}}
+  {{/contentFor}}
   {{#contentFor "headerTitle"}}
     <h1 class="title">Post List</h1>
   {{/contentFor}}
