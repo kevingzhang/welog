@@ -5,6 +5,9 @@
   {{#contentFor "headerTitle"}}
     <h1 class="title">{{userName authorId}}</h1>
   {{/contentFor}}
+  {{#contentFor "headerButtonRight"}}
+    <button class="button button-clear" onclick="Router.go('/editPost/' + '{{_id}}')">Edit</button>
+  {{/contentFor}}
 
   {{#ionView}}
     {{#ionContent}}
@@ -43,10 +46,6 @@
       Share
     </a>
   </div>
-  <div class="item tabs tabs-secondary tabs-icon-left">
-    <button id='edit-button'>Edit</button>
-  </div>
-  
   </div>
   
     {{/ionContent}}
