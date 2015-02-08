@@ -3,7 +3,12 @@
     {{>ionNavBackButton path="index"}}
   {{/contentFor}}
   {{#contentFor "headerTitle"}}
-    <h1 class="title">Post View</h1>
+    <h1 class="title">{{userName authorId}}</h1>
+
+  {{/contentFor}}
+  {{#contentFor "headerButtonRight"}}
+    <button class="button button-clear" onclick="Router.go('/editPost/' + '{{_id}}')">Edit</button>
+
   {{/contentFor}}
 
   {{#ionView}}
@@ -43,7 +48,6 @@
       Share
     </a>
   </div>
-  
   </div>
   
     {{/ionContent}}

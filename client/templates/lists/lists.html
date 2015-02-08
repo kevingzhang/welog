@@ -1,10 +1,13 @@
 <template name="lists">
 
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton text=" " icon="compose" path="addpost"}}
+  {{/contentFor}}
   {{#contentFor "headerTitle"}}
-    <h1 class="title">Post List</h1>
+    <h1 class="title">Welog</h1>
   {{/contentFor}}
   {{#contentFor "headerButtonRight"}}
-    <button class="button button-clear" onclick="alert('TODO')">Login</button>
+    <button class="button button-clear" onclick="alert('TODO')"><i class="icon ion-log-in"></i></button>
   {{/contentFor}}
 
   {{#ionView}}
@@ -25,7 +28,7 @@
 
             {{/with}}
             
-            <button class="button button-clear">{{> ionIcon icon="chevron-right"}}</button>
+            <button class="button button-clear viewpost" data-id="{{_id}}">{{> ionIcon icon="chevron-right"}}</button>
 
           {{/ionItem}}
 

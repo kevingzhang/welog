@@ -56,4 +56,13 @@ Router.map(function() {
       return tmp_test;
     }
   });
+  this.route('editPost', {
+    path: '/editPost/:_id',
+    subscriptions:function(){
+      Meteor.subscribe('post', this.params._id);
+    },
+    data: function(){
+      return Posts.findOne(this.params._id);
+    }
+  });
 });

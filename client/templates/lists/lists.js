@@ -11,3 +11,12 @@ Template.lists.helpers({
   	return u;
   }
 });
+
+Template.lists.events({
+	'click .viewpost': function (event) {
+		// body...
+		var postid = event.target.getAttribute('data-id');
+		console.log(postid);
+		Router.go('/postView/'  +  postid);
+	}
+})
