@@ -1,5 +1,6 @@
 Meteor.startup ()->
 
+
   if Meteor.users.find().count() is 0
     for i in [0..10]
       Accounts.createUser

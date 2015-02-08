@@ -1,0 +1,54 @@
+<template name="postView">
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="index"}}
+  {{/contentFor}}
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">Post View</h1>
+  {{/contentFor}}
+
+  {{#ionView}}
+    {{#ionContent}}
+    <div class="list card">
+
+          {{#ionItem buttonRight=true avatar=true}}
+
+            <img src="https://randomuser.me/api/portraits/thumb/men/27.jpg">
+            <h2>{{title}}</h2>
+            <p>
+              {{time}}
+            </p>
+            
+          {{/ionItem}}
+
+          {{#ionItem class="item-body"}}
+    <p>
+      {{body}}
+    </p>
+    <p>
+      <a href="#" class="subdued">1 Like</a>
+      <a href="#" class="subdued">5 Comments</a>
+    </p>
+  {{/ionItem}}
+  <div class="item tabs tabs-secondary tabs-icon-left">
+    <a class="tab-item" href="#">
+      <i class="icon ion-thumbsup"></i>
+      Like
+    </a>
+    <a class="tab-item" href="#">
+      <i class="icon ion-chatbox"></i>
+      Comment
+    </a>
+    <a class="tab-item" href="#">
+      <i class="icon ion-share"></i>
+      Share
+    </a>
+  </div>
+  <div class="item tabs tabs-secondary tabs-icon-left">
+    <button id='edit-button'>Edit</button>
+  </div>
+  
+  </div>
+  
+    {{/ionContent}}
+  {{/ionView}}
+</template>
