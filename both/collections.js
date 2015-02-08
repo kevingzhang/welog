@@ -1,3 +1,4 @@
+
 Posts = new Mongo.Collection('posts');
 
 Posts.attachSchema(new SimpleSchema({
@@ -27,5 +28,13 @@ Posts.attachSchema(new SimpleSchema({
       autoValue: function() {
         return new Date;
       }
+<<<<<<< HEAD
+=======
+
+  },
+  authorId:{
+    type: String,
+    optional:true  //Finally we have to remove this line when we ask users to login to post blog.
+>>>>>>> post_view
   }
 }));

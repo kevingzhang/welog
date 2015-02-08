@@ -12,7 +12,12 @@ Meteor.startup(function () {
 });
 
 Router.map(function() {
-  this.route('index', {path: '/'});
+//  this.route('index', {path: '/'});
+  this.route('lists', {path: '/', subscriptions: function() {
+    // Client
+    console.log("ready to sub Posts");
+    Meteor.subscribe('Posts');
+  }});
   this.route('actionSheet');
   this.route('backdrop');
   this.route('forms', {
@@ -24,7 +29,7 @@ Router.map(function() {
   });
   this.route('addpost');
   this.route('headersFooters');
-  this.route('lists');
+//  this.route('lists');
   this.route('loading');
   this.route('modal');
   this.route('navigation');
@@ -40,4 +45,15 @@ Router.map(function() {
   this.route('tabs.three', {path: '/tabs/three', layoutTemplate: 'tabsLayout'});
   this.route('tabs.four', {path: '/tabs/four', layoutTemplate: 'tabsLayout'});
   this.route('userAccounts');
+  this.route('postView', {
+    path: '/postView/:_id',
+    subscriptions:function(){
+      Meteor.subscribe('post', this.params._id);
+    },
+    data: function(){
+      var tmp_test = Posts.findOne(this.params._id);
+      console.log(tmp_test);
+      return tmp_test;
+    }
+  });
 });
