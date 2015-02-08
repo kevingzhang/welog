@@ -1,9 +1,6 @@
 Posts.allow({
   insert: function (userId, doc) {
     // the user must be logged in, and the document must be owned by the user
-    console.log("userId is ", userId);
-    console.log("authorId is ", doc.authorId);
-
     return (userId && doc.authorId === userId);
   },
   update: function (userId, doc, fields, modifier) {
@@ -19,8 +16,6 @@ Posts.allow({
 Posts.deny({
   update: function (userId, docs, fields, modifier) {
     // can't change owners
-    console.log('authorId is', docs.authorId);
-    console.log('fields is', fields);
     return _.contains(fields, 'authorId');
 
   },
