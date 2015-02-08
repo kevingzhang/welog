@@ -7,6 +7,7 @@ Template.layout.events({
             IonActionSheet.show({
                 titleText: 'Menu',
                 buttons: [
+                    {text: 'Post <i class="icon ion-compose"></i>'},
                     {text: 'Logout <i class="icon ion-log-out"></i>'}
                 ],
             
@@ -15,7 +16,11 @@ Template.layout.events({
                     //console.log('Cancelled!');
                 },
                 buttonClicked: function (index) {
-                    if (index === 0) {
+                    if(index ===0) {
+                        Router.go('addpost');
+                    }
+
+                    if (index === 1) {
                         Meteor.logout(function(){
                             toastr.success("Successfully logged out!");
                             Router.go('lists');
