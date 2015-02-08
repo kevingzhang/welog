@@ -1,7 +1,9 @@
 <template name="lists">
 
   {{#contentFor "headerButtonLeft"}}
-    {{>ionNavBackButton text=" " icon="compose" path="addpost"}}
+    {{#if currentUser}}
+      {{>ionNavBackButton text=" " icon="compose" path="addpost"}}
+    {{/if}}
   {{/contentFor}}
   
   {{#contentFor "headerTitle"}}
