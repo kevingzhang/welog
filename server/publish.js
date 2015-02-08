@@ -8,7 +8,7 @@ Meteor.publishComposite('Posts', {
     children: [
         {
             find: function(post) {
-                console.log('inside children', post, post.authorId);
+                console.log('inside children', post.authorId);
                 // Find post author. Even though we only want to return
                 // one record here, we use "find" instead of "findOne"
                 // since this function should return a cursor.
@@ -37,7 +37,7 @@ Meteor.publishComposite('post', function(postId){
                     // since this function should return a cursor.
                     return Meteor.users.find(
                         { _id: post.authorId },
-                        { fields: { createdAt: 1, username: 1, picture: 1 } });
+                        { fields: { createdAt: 1, username: 1, picture: 1} });
                 }
             },
         ]
@@ -45,3 +45,16 @@ Meteor.publishComposite('post', function(postId){
     
 });
 
+Meteor.publish("allUsers", function (opts) {
+
+
+  var userFields = {    
+    'username': 1, 'picture': 1, 'createdAt': 1, '_id': 1,
+
+  };  
+  // userFields = {}
+  // var res = Meteor.users.find( search ,{fields: userFields, sort:{updatedAt:-1} } );
+  var res = Meteor.users.find( search ,{fields: userFields } );
+
+  return res;
+});
