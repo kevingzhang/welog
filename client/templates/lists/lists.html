@@ -6,7 +6,9 @@
     <h1 class="title">Lists</h1>
   {{/contentFor}}
   {{#contentFor "headerButtonRight"}}
-    <button class="button button-clear" onclick="alert('TODO')">Edit</button>
+
+    {{>ionNavBackButton text="Login" icon="" path="userAccounts"}}
+  
   {{/contentFor}}
 
   {{#ionView}}
