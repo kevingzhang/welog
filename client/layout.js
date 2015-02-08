@@ -7,7 +7,7 @@ Template.layout.events({
             IonActionSheet.show({
                 titleText: 'Menu',
                 buttons: [
-                    {text: 'Logout <i class="icon ion-share"></i>'}
+                    {text: 'Logout <i class="icon ion-log-out"></i>'}
                 ],
                 cancelText: 'Cancel',
                 cancel: function () {
@@ -16,8 +16,10 @@ Template.layout.events({
                 buttonClicked: function (index) {
                     if (index === 0) {
                         Meteor.logout(function(){
-                            alert('User logged out');
-                            Router.go('lists');
+                            toastr.warning("Logged out!");
+                            //toastr.clear();
+//                            alert('User logged out');
+//                            Router.go('lists');
                         });
                     }
                     return true;
@@ -31,7 +33,7 @@ Template.layout.events({
             IonActionSheet.show({
                 titleText: 'Menu',
                 buttons: [
-                    {text: 'Login <i class="icon ion-share"></i>'}
+                    {text: 'Login <i class="icon ion-log-in"></i>'}
                 ],
                 cancelText: 'Cancel',
                 cancel: function () {
