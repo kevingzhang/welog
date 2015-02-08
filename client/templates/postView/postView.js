@@ -5,3 +5,11 @@ Template.postView.events({
 		Router.go('editPost', {_id: template.data._id})
 	}
 })
+
+Template.postView.helpers({
+  userName: function (authorId) {
+  	console.log(authorId);
+  	var currentUser = Meteor.users.findOne(authorId);
+  	return currentUser.username;
+  }
+});
