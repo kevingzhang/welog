@@ -6,12 +6,16 @@
   {{#contentFor "headerTitle"}}
     <h1 class="title">Welog</h1>
   {{/contentFor}}
+
+
   {{#contentFor "headerButtonRight"}}
-
-    {{>ionNavBackButton text="Login" icon="" path="userAccounts"}}
-
->>>>>>> post_view
+      {{#if currentUser}}
+        {{>ionNavBackButton text=" " icon="ios-person" path="addpost"}}
+      {{else}}
+        {{>ionNavBackButton text=" " icon="ios-person-outline" path="userAccounts"}}
+      {{/if}}
   {{/contentFor}}
+
 
   {{#ionView}}
     {{#ionContent}}
