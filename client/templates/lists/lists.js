@@ -19,4 +19,4 @@ Template.lists.events({
 		console.log(postid);
 		Router.go('/postView/'  +  postid);
 	}
-})
+});
