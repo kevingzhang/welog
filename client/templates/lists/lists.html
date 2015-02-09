@@ -1,28 +1,49 @@
 <template name="lists">
+
   {{#contentFor "headerButtonLeft"}}
-    {{>ionNavBackButton path="index"}}
+    {{#if currentUser}}
+      <a href="{{pathFor 'addpost'}}" class="button button-clear">{{> ionIcon icon="ios-compose"}}</a>
+    {{/if}}
   {{/contentFor}}
+  
   {{#contentFor "headerTitle"}}
-    <h1 class="title">Lists</h1>
+    <h1 class="title">Welog</h1>
   {{/contentFor}}
+
+
   {{#contentFor "headerButtonRight"}}
-    <button class="button button-clear" onclick="alert('TODO')">Edit</button>
+
+
+  <button class="button button-clear" id="showProfileMenu">
+    {{#if currentUser}}
+        Hi, {{currentUser.username}} <i class="icon ion-ios-person"></i>
+    {{else}}
+        <i class="icon ion-ios-person-outline"></i>
+    {{/if}}
+  </button>
+
   {{/contentFor}}
+
 
   {{#ionView}}
     {{#ionContent}}
       {{#ionList}}
 
-        {{#each times}}
+        {{#each posts}}
 
           {{#ionItem buttonRight=true avatar=true}}
+            {{#with getuser}}
 
-            <img src="https://randomuser.me/api/portraits/thumb/men/27.jpg">
-            <h2>John Smith</h2>
-            <p>
-              (555) 555-1212
-            </p>
-            <button class="button button-positive">{{> ionIcon icon="ios-telephone"}}</button>
+              <img src="{{picture.thumbnail}}">
+              
+              <h2>{{../title}}</h2>
+              <p>
+                {{username}} &nbsp; {{../time}}
+              </p>
+
+            {{/with}}
+            
+            <button class="button button-clear viewpost" data-id="{{_id}}">{{> ionIcon icon="chevron-right"}}</button>
 
           {{/ionItem}}
 
