@@ -1,17 +1,17 @@
  Powered by 
- ![](http://f.cl.ly/items/391y4708420P0H001k1G/meteoric.png)
+ ![](http:#f.cl.ly/items/391y4708420P0H001k1G/meteoric.png)
 
 # Kevin Meteor 101 课程练习项目
 
-本项目采用 [Meteoric](https://github.com/meteoric) packages 作为前端 UI. 其中包括以下 Package:
+本项目采用 [Meteoric](https:#github.com/meteoric) packages 作为前端 UI. 其中包括以下 Package:
 
-- [meteoric:ionic](https://github.com/meteoric/meteor-ionic)
-- [meteoric:ionic-sass](https://github.com/meteoric/ionic-sass)
-- [meteoric:ionicons-sass](https://github.com/meteoric/ionicons-sass)
-- [meteoric:autoform-ionic](https://github.com/meteoric/autoform-ionic)
-- [meteoric:useraccounts-ionic](https://github.com/meteoric/useraccounts-ionic)
+- [meteoric:ionic](https:#github.com/meteoric/meteor-ionic)
+- [meteoric:ionic-sass](https:#github.com/meteoric/ionic-sass)
+- [meteoric:ionicons-sass](https:#github.com/meteoric/ionicons-sass)
+- [meteoric:autoform-ionic](https:#github.com/meteoric/autoform-ionic)
+- [meteoric:useraccounts-ionic](https:#github.com/meteoric/useraccounts-ionic)
 
-See it in action here: [meteoric.github.io](http://meteoric.github.io)
+See it in action here: [meteoric.github.io](http:#meteoric.github.io)
 
 ## 项目目标
 这个项目不是一个 Production ready 的项目. 主要目的是让大家练习课堂中学习到的 Meteor 知识, 并真实开发一个实际项目. 
