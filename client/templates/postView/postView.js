@@ -15,3 +15,12 @@ Template.postView.helpers({
   	return currentUser.username;
   }
 });
+
+Template.postView.helpers({
+  get_avatar_url_from_post: function (post) {
+    // http://momentjs.com/
+    var p = Posts.findOne({_id: post._id});
+    var usr = Meteor.users.findOne({_id: p.authorId});
+    return Avatar.getUrl(usr);
+  }
+});

@@ -18,7 +18,12 @@
 
           {{#ionItem buttonRight=true avatar=true}}
 
-            <img src="https://randomuser.me/api/portraits/thumb/men/27.jpg">
+            {{#if authorId}}
+              <img src="{{get_avatar_url_from_post this}}">
+            {{else}}
+              <img src="https://randomuser.me/api/portraits/thumb/men/27.jpg">
+            {{/if}}
+
             <h2>{{title}}</h2>
             <p>
               {{humanizedTime time}}
