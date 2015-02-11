@@ -31,9 +31,13 @@
 
           {{#ionItem buttonRight=true avatar=true}}
             {{#with getuser}}
-
+            
+              {{#if emails.length}}
+                <img src="{{get_avatar_url this}}">
+              {{else}}
               <img src="{{getUserPictureOrDefault}}">
-              
+              {{/if}}
+
               <h2>{{../title}}</h2>
               <p>
                 {{username}} &nbsp; {{humanizedTime ../time}}

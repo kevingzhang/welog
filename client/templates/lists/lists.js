@@ -24,3 +24,10 @@ Template.lists.events({
 		Router.go('/postView/'  +  postid);
 	}
 });
+
+Template.lists.helpers({
+  get_avatar_url: function (usr) {
+    // http://momentjs.com/
+    return Avatar.getUrl(usr);
+  }
+});
