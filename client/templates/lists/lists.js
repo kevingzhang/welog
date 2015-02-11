@@ -1,7 +1,7 @@
 
 Template.lists.helpers({
   posts: function() {
-    return Posts.find();
+    return Posts.find({}, {sort:{time:-1}});
   },
 
   getuser: function() {
