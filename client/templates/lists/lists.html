@@ -32,11 +32,11 @@
           {{#ionItem buttonRight=true avatar=true}}
             {{#with getuser}}
 
-              <img src="{{picture.thumbnail}}">
+              <img src="{{getUserPictureOrDefault}}">
               
               <h2>{{../title}}</h2>
               <p>
-                {{username}} &nbsp; {{../time}}
+                {{username}} &nbsp; {{humanizedTime ../time}}
               </p>
 
             {{/with}}

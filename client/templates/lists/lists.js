@@ -5,11 +5,15 @@ Template.lists.helpers({
   },
 
   getuser: function() {
-    console.log('this', this);
+    //console.log('this', this);
   	var u = Meteor.users.findOne({_id: this.authorId});
   	console.log ("u is ", u);
   	return u;
+  },
+  getUserPictureOrDefault: function(){
+    return (this.picture&& this.picture.thumbnail) || 'https://randomuser.me/api/portraits/thumb/men/1.jpg'
   }
+  
 });
 
 Template.lists.events({

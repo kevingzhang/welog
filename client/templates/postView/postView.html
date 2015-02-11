@@ -1,6 +1,10 @@
 <template name="postView">
   {{#contentFor "headerButtonLeft"}}
+<<<<<<< HEAD
     {{>ionNavBackButton text=" " icon="ios-list" path="lists"}}
+=======
+    {{>ionNavBackButton path="lists"}}
+>>>>>>> kevin-dev
   {{/contentFor}}
   {{#contentFor "headerTitle"}}
     <h1 class="title">{{userName authorId}}</h1>
@@ -20,7 +24,7 @@
             <img src="https://randomuser.me/api/portraits/thumb/men/27.jpg">
             <h2>{{title}}</h2>
             <p>
-              {{time}}
+              {{humanizedTime time}}
             </p>
             
           {{/ionItem}}

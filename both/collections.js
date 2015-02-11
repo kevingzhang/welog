@@ -32,6 +32,8 @@ Posts.attachSchema(new SimpleSchema({
   },
   authorId:{
     type: String,
-    optional:true  //Finally we have to remove this line when we ask users to login to post blog.
+    autoValue: function(){
+      return Meteor.userId();
+    }
   }
 }));
