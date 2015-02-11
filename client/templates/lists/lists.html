@@ -4,6 +4,7 @@
     {{#if currentUser}}
       {{>ionNavBackButton text=" " icon="compose" path="addpost"}}
     {{/if}}
+
   {{/contentFor}}
   
   {{#contentFor "headerTitle"}}
@@ -32,6 +33,7 @@
         {{#each posts}}
 
           {{#ionItem buttonRight=true avatar=true}}
+            <div class = "viewPostFromDiv" data-id = '{{_id}}'>
             {{#with getuser}}
 
               <img src="{{picture.thumbnail}}">
@@ -42,9 +44,11 @@
               </p>
 
             {{/with}}
-            
-            <button class="button button-clear viewpost" data-id="{{_id}}">{{> ionIcon icon="chevron-right"}}</button>
-
+     
+     <!--       
+              <button class="button button-clear viewpost" data-id="{{_id}}">{{> ionIcon icon="chevron-right"}}</button>
+     -->
+            </div>
           {{/ionItem}}
 
         {{/each}}

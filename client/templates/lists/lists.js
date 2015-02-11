@@ -13,7 +13,7 @@ Template.lists.helpers({
 });
 
 Template.lists.events({
-	'click .viewpost': function (event) {
+	'click .viewPostFromDiv': function (event) {
 		// body...
 		var postid = event.target.getAttribute('data-id');
 		console.log(postid);
