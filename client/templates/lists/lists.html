@@ -29,7 +29,7 @@
 
         {{#each posts}}
 
-          {{#ionItem buttonRight=true avatar=true}}
+          {{#ionItem buttonRight=true avatar=true class="viewpost"}}
             {{#with getuser}}
 
               {{#if emails.length}}
@@ -45,7 +45,7 @@
 
             {{/with}}
             
-            <button class="button button-clear viewpost" data-id="{{_id}}">{{> ionIcon icon="chevron-right"}}</button>
+            <button class="button button-clear" data-id="{{_id}}">{{> ionIcon icon="chevron-right"}}</button>
 
           {{/ionItem}}
 
