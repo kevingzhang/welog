@@ -33,7 +33,11 @@ Posts.attachSchema(new SimpleSchema({
   authorId:{
     type: String,
     autoValue: function(){
-      return Meteor.userId();
+      if (this.isUpdate) {
+          return;
+      }
+      console.log(Meteor.user()._id);
+      return Meteor.user()._id;
     }
   }
 }));
