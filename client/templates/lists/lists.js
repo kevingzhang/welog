@@ -17,9 +17,9 @@ Template.lists.helpers({
 });
 
 Template.lists.events({
-	'click .viewpost': function (event) {
+	'click .viewpost': function() {
 		// body...
-		var postid = event.target.getAttribute('data-id');
+		var postid = this._id;
 		console.log(postid);
 		Router.go('/postView/'  +  postid);
 	}

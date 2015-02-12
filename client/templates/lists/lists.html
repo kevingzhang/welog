@@ -28,27 +28,27 @@
       {{#ionList}}
 
         {{#each posts}}
+          <div class="viewpost" data-id="{{_id}}">
+            {{#ionItem buttonRight=true avatar=true}}
+              {{#with getuser}}
 
-          {{#ionItem buttonRight=true avatar=true class="viewpost"}}
-            {{#with getuser}}
+                {{#if emails.length}}
+                  <img src="{{get_avatar_url this}}">
+                {{else}}
+                  <img src="{{getUserPictureOrDefault}}">
+                {{/if}}
 
-              {{#if emails.length}}
-                <img src="{{get_avatar_url this}}">
-              {{else}}
-                <img src="{{getUserPictureOrDefault}}">
-              {{/if}}
+                <h2>{{../title}}</h2>
+                <p>
+                  {{username}} &nbsp; {{humanizedTime ../time}}
+                </p>
 
-              <h2>{{../title}}</h2>
-              <p>
-                {{username}} &nbsp; {{humanizedTime ../time}}
-              </p>
-
-            {{/with}}
+              {{/with}}
             
-            <button class="button button-clear" data-id="{{_id}}">{{> ionIcon icon="chevron-right"}}</button>
+              <button class="button button-clear">{{> ionIcon icon="chevron-right"}}</button>
 
-          {{/ionItem}}
-
+            {{/ionItem}}
+          </div>
         {{/each}}
 
       {{/ionList}}
