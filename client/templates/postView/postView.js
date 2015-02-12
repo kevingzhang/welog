@@ -5,7 +5,7 @@ Template.postView.events({
 		console.log(template);
 		Router.go('editPost', {_id: template.data._id})
 	}
-})
+});
 
 
 Template.postView.helpers({
@@ -13,6 +13,10 @@ Template.postView.helpers({
   	console.log(authorId);
   	var currentUser = Meteor.users.findOne(authorId);
   	return currentUser.username;
+  },
+
+  isMyPost: function () {
+      return Meteor.user()._id === this.authorId;
   }
 });
 

@@ -1,16 +1,17 @@
 <template name="postView">
   {{#contentFor "headerButtonLeft"}}
     {{>ionNavBackButton text=" " icon="ios-list" path="lists"}}
-
   {{/contentFor}}
+
   {{#contentFor "headerTitle"}}
     <h1 class="title">{{userName authorId}}</h1>
-
   {{/contentFor}}
+
+  {{#if isMyPost}}
   {{#contentFor "headerButtonRight"}}
     <button class="button button-clear" onclick="Router.go('/editPost/' + '{{_id}}')">Edit</button>
-
   {{/contentFor}}
+  {{/if}}
 
   {{#ionView}}
     {{#ionContent}}
