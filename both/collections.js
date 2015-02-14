@@ -34,10 +34,12 @@ Posts.attachSchema(new SimpleSchema({
     type: String,
     autoValue: function(){
       if (this.isUpdate) {
-          return;
+        return;
       }
-      console.log(Meteor.user()._id);
-      return Meteor.user()._id;
+      if (this.isInsert){
+        return this.userId;
+      }
+      
     }
   }
 }));
