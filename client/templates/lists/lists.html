@@ -1,7 +1,14 @@
 <template name="lists">
 
   {{#contentFor "headerButtonLeft"}}
+<<<<<<< HEAD
     
+=======
+    {{#if currentUser}}
+      {{>ionNavBackButton text=" " icon="compose" path="addpost"}}
+    {{/if}}
+
+>>>>>>> 704e52f0b45d4aba9761af9de51901ee3253815a
   {{/contentFor}}
   
   {{#contentFor "headerTitle"}}
@@ -28,6 +35,7 @@
       {{#ionList}}
 
         {{#each posts}}
+<<<<<<< HEAD
           <div class="viewpost" data-id="{{_id}}">
             {{#ionItem buttonRight=true avatar=true}}
               {{#with getuser}}
@@ -46,6 +54,27 @@
               {{/with}}
             
               <button class="button button-clear">{{> ionIcon icon="chevron-right"}}</button>
+=======
+
+          {{#ionItem buttonRight=true avatar=true}}
+            <div class = "viewPostFromDiv" data-id = '{{_id}}'>
+            {{#with getuser}}
+
+              <img src="{{picture.thumbnail}}">
+              
+              <h2>{{../title}}</h2>
+              <p>
+                {{username}} &nbsp; {{../time}}
+              </p>
+
+            {{/with}}
+     
+     <!--       
+              <button class="button button-clear viewpost" data-id="{{_id}}">{{> ionIcon icon="chevron-right"}}</button>
+     -->
+            </div>
+          {{/ionItem}}
+>>>>>>> 704e52f0b45d4aba9761af9de51901ee3253815a
 
             {{/ionItem}}
           </div>

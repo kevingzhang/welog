@@ -32,6 +32,7 @@ Posts.attachSchema(new SimpleSchema({
   },
   authorId:{
     type: String,
+<<<<<<< HEAD
     autoValue: function(){
       if (this.isUpdate) {
         return;
@@ -41,5 +42,14 @@ Posts.attachSchema(new SimpleSchema({
       }
       
     }
+=======
+      autoValue: function() {
+        if(this.isUpdate){
+          return;
+        }
+        console.log(Meteor.user()._id);
+        return Meteor.user()._id;
+      }
+>>>>>>> 704e52f0b45d4aba9761af9de51901ee3253815a
   }
 }));
