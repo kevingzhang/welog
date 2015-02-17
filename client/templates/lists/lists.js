@@ -17,7 +17,11 @@ Template.lists.helpers({
 });
 
 Template.lists.events({
+<<<<<<< HEAD
 	'click .viewpost': function() {
+=======
+	'click .viewPostFromDiv': function (event) {
+>>>>>>> 704e52f0b45d4aba9761af9de51901ee3253815a
 		// body...
 		var postid = this._id;
 		console.log(postid);

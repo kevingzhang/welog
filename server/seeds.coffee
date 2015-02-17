@@ -1,6 +1,6 @@
-Meteor.startup ()->
 
 
+<<<<<<< HEAD
   # if Meteor.users.find().count() is 0
   #   for i in [0..10]
   #     Accounts.createUser
@@ -18,3 +18,5 @@ Meteor.startup ()->
   #       published: Fake.fromArray [true, false]
   #       time: new Date()
   #       authorId: usersArray[uid]._id
+=======
+>>>>>>> 704e52f0b45d4aba9761af9de51901ee3253815a
