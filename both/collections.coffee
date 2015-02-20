@@ -13,9 +13,17 @@ Posts.attachSchema new SimpleSchema
 
   'sections.$.secType':
     type:String
+    allowedValues:['text', 'picture', 'audio', 'video']
 
-  'sections.$.secBody':
-    type:Object
+  'sections.$.secText':
+    type:String
+    autoform:
+      rows:3
+  'secitons.$.secPicture':
+    type:String 
+
+  
+
   
   body: 
     type: String
