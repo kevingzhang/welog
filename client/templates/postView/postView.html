@@ -19,25 +19,28 @@
     {{#ionContent}}
     <div class="list card">
 
-          {{#ionItem buttonRight=true avatar=true}}
+    {{#ionItem buttonRight=true avatar=true}}
 
-            {{#if authorId}}
-              <img src="{{get_avatar_url_from_post this}}">
-            {{else}}
-              <img src="https://randomuser.me/api/portraits/thumb/men/27.jpg">
-            {{/if}}
+      {{#if authorId}}
+        <img src="{{get_avatar_url_from_post this}}">
+      {{else}}
+        <img src="https://randomuser.me/api/portraits/thumb/men/27.jpg">
+      {{/if}}
 
-            <h2>{{title}}</h2>
-            <p>
-              {{humanizedTime time}}
-            </p>
-            
-          {{/ionItem}}
+      <h2>{{title}}</h2>
+      <p>
+        {{humanizedTime time}}
+      </p>
+      
+    {{/ionItem}}
 
-          {{#ionItem class="item-body"}}
-    <p>
-      {{body}}
-    </p>
+    {{#ionItem class="item-body"}}
+    {{#each sections}}
+      {{#if isTypeText}}
+      <textarea readonly data-id={{time}} type='text' rows='4' class='in-display-mode' label-type=''>{{text}}</textarea>
+      {{/if}}
+      
+    {{/each}}
     <p>
       <a href="#" class="subdued">1 Like</a>
       <a href="#" class="subdued">5 Comments</a>

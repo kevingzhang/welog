@@ -1,13 +1,13 @@
 
 
-Template.addpost.helpers
+Template.editPost.helpers
   sections:->
     Session.get 'sections'
   isTypeText: () ->
     @type is 'text'
     # ...
 
-Template.addpost.events
+Template.editPost.events
   'click a.ion-android-textsms': (e) ->
     sections = (Session.get 'sections') or []
 
@@ -53,12 +53,12 @@ Template.addpost.events
       delete s.isNotEditMode
       return s
     
-    newPost = 
+    updateObj = 
       title:title
       sections: cleanedSections
       published:true
 
-    postId = Posts.insert newPost
-    Router.go "/postView/#{postId}"
+    postId = Posts.update {_id:@_id},{$set:updateObj}
+    Router.go "/postView/#{@_id}"
 
     # ...
