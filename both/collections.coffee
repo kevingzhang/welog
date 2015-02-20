@@ -11,27 +11,24 @@ Posts.attachSchema new SimpleSchema
       'label-type': 'stacked'
     
 
-  'sections.$.secType':
+  'sections.$.type':
     type:String
     allowedValues:['text', 'picture', 'audio', 'video']
 
-  'sections.$.secText':
+  'sections.$.text':
     type:String
-    autoform:
-      rows:3
-  'secitons.$.secPicture':
-    type:String 
-
-  
-
-  
-  body: 
-    type: String
-    autoform: 
-      rows: 10
-      'label-type': 'stacked'
+    optional:true
     
+  'sections.$.pic':
+    type:String 
+    optional:true 
+
+  'sections.$.time':
+    type:Number
+    optional:true 
+
   
+
   published: 
     type: Boolean
     defaultValue: true

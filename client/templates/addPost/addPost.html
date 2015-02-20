@@ -19,11 +19,17 @@
       </div>
       {{#each sections}}
       {{#if isTypeText}}
-      <label type='stacked' class='item item-input item-stacked-label'>
-        <a data-id={{time}} class='input-label icon ion-close-circled right-x-button '></a>
-        <textarea type='text' rows='3' label-type='stacked'></textarea>
-      </label>
-      {{/if}}
+      
+      {{#unless isNotEditMode}}
+      <a data-id={{time}} class='input-label icon ion-close-circled right-x-button '></a>
+      <textarea data-id={{time}} type='text' class='in-edit-mode' rows='4' label-type=''>{{text}}</textarea>
+      {{else}}
+      <a data-id={{time}} class='input-label'></a>
+      
+      <textarea readonly data-id={{time}} type='text' rows='4' class='in-display-mode' label-type=''>{{text}}</textarea>
+      {{/unless}}
+
+    {{/if}}
       {{#if isTypePic}}
       <div>
 
