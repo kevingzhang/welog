@@ -33,8 +33,11 @@ Posts.attachSchema new SimpleSchema
   
   time:
     type: Date
-      autoValue: ->
-        return new Date
+    autoValue: ->
+      if @isInsert
+        return new Date()
+      else
+        @unset()
       
 
   
