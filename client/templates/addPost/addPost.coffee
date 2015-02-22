@@ -5,7 +5,8 @@ Template.addpost.helpers
     Session.get 'sections'
   isTypeText: () ->
     @type is 'text'
-    # ...
+  isTypePic: () ->
+    @type is 'picture'
 
 Template.addpost.events
   'click a.ion-android-textsms': (e) ->
@@ -15,8 +16,15 @@ Template.addpost.events
     Session.set 'sections', sections
     # ...
   'click a.ion-android-camera': (e) ->
-    console.log "add text now"
-    # ...
+    console.log 'Took a picture'
+    MeteoricCamera.getPicture {}, (e,r)->
+      if e?
+        console.log e.message
+      else
+        sections = (Session.get 'sections') or []
+        sections.push {type:'picture', time: Date.now(), picture: r}
+        Session.set 'sections', sections
+     # ...
   'click a.ion-android-image': (e) ->
     console.log "add text now"
 
@@ -47,8 +55,11 @@ Template.addpost.events
     Session.set 'sections', sections
 
   'click a.ion-android-send':(e, t)->
-    title = (t.find 'input[name=title]')?.value
+    console.log 'Submitting...'
     sections = Session.get 'sections'
+    console.log sections
+
+    title = (t.find 'input[name=title]')?.value
     cleanedSections = sections.map (s)->
       delete s.isNotEditMode
       return s
@@ -58,6 +69,7 @@ Template.addpost.events
       sections: cleanedSections
       published:true
 
+    console.log newPost
     postId = Posts.insert newPost
     Router.go "/postView/#{postId}"
 
