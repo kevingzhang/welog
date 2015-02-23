@@ -1,37 +1,54 @@
 <template name="lists">
 
   {{#contentFor "headerButtonLeft"}}
-    {{>ionNavBackButton text=" " icon="compose" path="addpost"}}
+    
   {{/contentFor}}
+  
   {{#contentFor "headerTitle"}}
     <h1 class="title">Welog</h1>
   {{/contentFor}}
+
+
   {{#contentFor "headerButtonRight"}}
-    <button class="button button-clear" onclick="alert('TODO')"><i class="icon ion-log-in"></i></button>
+
+
+  <button class="button button-clear" id="showProfileMenu">
+    {{#if currentUser}}
+        Hi, {{currentUser.username}} <i class="icon ion-ios-person"></i>
+    {{else}}
+        <i class="icon ion-ios-person-outline"></i>
+    {{/if}}
+  </button>
+
   {{/contentFor}}
+
 
   {{#ionView}}
     {{#ionContent}}
       {{#ionList}}
 
         {{#each posts}}
+          <div class="viewpost" data-id="{{_id}}">
+            {{#ionItem buttonRight=true avatar=true}}
+              {{#with getuser}}
 
-          {{#ionItem buttonRight=true avatar=true}}
-            {{#with getuser authorId}}
+                {{#if emails.length}}
+                  <img src="{{get_avatar_url this}}">
+                {{else}}
+                  <img src="{{getUserPictureOrDefault}}">
+                {{/if}}
 
-              <img src="{{picture.thumbnai}}"> 
-              
-              <h2>{{../title}}</h2>
-              <p>
-                {{username}} &nbsp; {{../time}}
-              </p>
+                <h2>{{../title}}</h2>
+                <p>
+                  {{username}} &nbsp; {{humanizedTime ../time}}
+                </p>
 
-            {{/with}}
+              {{/with}}
             
-            <button class="button button-clear viewpost" data-id="{{_id}}">{{> ionIcon icon="chevron-right"}}</button>
+              <button class="button button-clear">{{> ionIcon icon="chevron-right"}}</button>
 
-          {{/ionItem}}
-
+            {{/ionItem}}
+          </div>
         {{/each}}
 
       {{/ionList}}

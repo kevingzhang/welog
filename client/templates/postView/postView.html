@@ -1,34 +1,49 @@
 <template name="postView">
   {{#contentFor "headerButtonLeft"}}
-    {{>ionNavBackButton path="index"}}
+
+    {{>ionNavBackButton text=" " icon="ios-list-outline" path="lists"}}
+
   {{/contentFor}}
+
   {{#contentFor "headerTitle"}}
     <h1 class="title">{{userName authorId}}</h1>
-
   {{/contentFor}}
+
+  {{#if isMyPost}}
   {{#contentFor "headerButtonRight"}}
     <button class="button button-clear" onclick="Router.go('/editPost/' + '{{_id}}')">Edit</button>
-
   {{/contentFor}}
+  {{/if}}
 
   {{#ionView}}
     {{#ionContent}}
     <div class="list card">
 
-          {{#ionItem buttonRight=true avatar=true}}
+    {{#ionItem buttonRight=true avatar=true}}
 
-            <img src="https://randomuser.me/api/portraits/thumb/men/27.jpg">
-            <h2>{{title}}</h2>
-            <p>
-              {{time}}
-            </p>
-            
-          {{/ionItem}}
+      {{#if authorId}}
+        <img src="{{get_avatar_url_from_post this}}">
+      {{else}}
+        <img src="https://randomuser.me/api/portraits/thumb/men/27.jpg">
+      {{/if}}
 
-          {{#ionItem class="item-body"}}
-    <p>
-      {{body}}
-    </p>
+      <h2>{{title}}</h2>
+      <p>
+        {{humanizedTime time}}
+      </p>
+      
+    {{/ionItem}}
+
+    {{#ionItem class="item-body"}}
+    {{#each sections}}
+      {{#if isTypeText}}
+      <textarea readonly data-id={{time}} type='text' rows='4' class='in-display-mode' label-type=''>{{text}}</textarea>
+      {{/if}}
+      {{#if isTypePic}}
+        <img src="{{picture}}"/>
+      {{/if}}
+      
+    {{/each}}
     <p>
       <a href="#" class="subdued">1 Like</a>
       <a href="#" class="subdued">5 Comments</a>

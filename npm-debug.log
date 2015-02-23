@@ -1,0 +1,188 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install', '-g', 'mup' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.36
+4 verbose cache add [ 'mup', null ]
+5 verbose cache add name=undefined spec="mup" args=["mup",null]
+6 verbose parsed url { protocol: null,
+6 verbose parsed url   slashes: null,
+6 verbose parsed url   auth: null,
+6 verbose parsed url   host: null,
+6 verbose parsed url   port: null,
+6 verbose parsed url   hostname: null,
+6 verbose parsed url   hash: null,
+6 verbose parsed url   search: null,
+6 verbose parsed url   query: null,
+6 verbose parsed url   pathname: 'mup',
+6 verbose parsed url   path: 'mup',
+6 verbose parsed url   href: 'mup' }
+7 silly lockFile 19bdb584-mup mup
+8 verbose lock mup /Users/fgao/.npm/19bdb584-mup.lock
+9 silly lockFile 19bdb584-mup mup
+10 silly lockFile 19bdb584-mup mup
+11 verbose addNamed [ 'mup', '' ]
+12 verbose addNamed [ null, '*' ]
+13 silly lockFile 49f77549-mup mup@
+14 verbose lock mup@ /Users/fgao/.npm/49f77549-mup.lock
+15 silly addNameRange { name: 'mup', range: '*', hasData: false }
+16 verbose request where is /mup
+17 verbose request registry https://registry.npmjs.org/
+18 verbose request id 14e933760db596fe
+19 verbose url raw /mup
+20 verbose url resolving [ 'https://registry.npmjs.org/', './mup' ]
+21 verbose url resolved https://registry.npmjs.org/mup
+22 verbose request where is https://registry.npmjs.org/mup
+23 info trying registry request attempt 1 at 21:57:24
+24 http GET https://registry.npmjs.org/mup
+25 http 200 https://registry.npmjs.org/mup
+26 silly registry.get cb [ 200,
+26 silly registry.get   { date: 'Sun, 08 Feb 2015 05:57:25 GMT',
+26 silly registry.get     server: 'CouchDB/1.5.0 (Erlang OTP/R16B03)',
+26 silly registry.get     etag: '"9EMEZBZL89SJ5WMLNP8B5MXH1"',
+26 silly registry.get     'content-type': 'application/json',
+26 silly registry.get     'cache-control': 'max-age=60',
+26 silly registry.get     'content-length': '54210',
+26 silly registry.get     'accept-ranges': 'bytes',
+26 silly registry.get     via: '1.1 varnish',
+26 silly registry.get     age: '0',
+26 silly registry.get     'x-served-by': 'cache-lax1428-LAX',
+26 silly registry.get     'x-cache': 'MISS',
+26 silly registry.get     'x-cache-hits': '0',
+26 silly registry.get     'x-timer': 'S1423375045.286188,VS0,VE117',
+26 silly registry.get     vary: 'Accept',
+26 silly registry.get     'keep-alive': 'timeout=10, max=50',
+26 silly registry.get     connection: 'Keep-Alive' } ]
+27 silly addNameRange number 2 { name: 'mup', range: '*', hasData: true }
+28 silly addNameRange versions [ 'mup',
+28 silly addNameRange   [ '0.1.2',
+28 silly addNameRange     '0.1.3',
+28 silly addNameRange     '0.1.4',
+28 silly addNameRange     '0.1.5',
+28 silly addNameRange     '0.1.6',
+28 silly addNameRange     '0.1.7',
+28 silly addNameRange     '0.1.8',
+28 silly addNameRange     '0.1.9',
+28 silly addNameRange     '0.1.10',
+28 silly addNameRange     '0.1.11',
+28 silly addNameRange     '0.1.12',
+28 silly addNameRange     '0.1.13',
+28 silly addNameRange     '0.2.0',
+28 silly addNameRange     '0.3.0',
+28 silly addNameRange     '0.4.0',
+28 silly addNameRange     '0.4.1',
+28 silly addNameRange     '0.4.2',
+28 silly addNameRange     '0.4.3',
+28 silly addNameRange     '0.4.4',
+28 silly addNameRange     '0.4.5',
+28 silly addNameRange     '0.4.6',
+28 silly addNameRange     '0.4.7',
+28 silly addNameRange     '0.5.0',
+28 silly addNameRange     '0.5.1',
+28 silly addNameRange     '0.5.2',
+28 silly addNameRange     '0.5.3',
+28 silly addNameRange     '0.6.0',
+28 silly addNameRange     '0.6.1',
+28 silly addNameRange     '0.6.3',
+28 silly addNameRange     '0.6.4',
+28 silly addNameRange     '0.6.5',
+28 silly addNameRange     '0.6.7',
+28 silly addNameRange     '0.6.8',
+28 silly addNameRange     '0.6.9',
+28 silly addNameRange     '0.6.10',
+28 silly addNameRange     '0.6.11',
+28 silly addNameRange     '0.6.12',
+28 silly addNameRange     '0.7.0',
+28 silly addNameRange     '0.7.1',
+28 silly addNameRange     '0.7.2',
+28 silly addNameRange     '0.7.3',
+28 silly addNameRange     '0.7.4',
+28 silly addNameRange     '0.7.5',
+28 silly addNameRange     '0.7.6',
+28 silly addNameRange     '0.7.7' ] ]
+29 verbose addNamed [ 'mup', '0.7.7' ]
+30 verbose addNamed [ '0.7.7', '0.7.7' ]
+31 silly lockFile e2a10439-mup-0-7-7 mup@0.7.7
+32 verbose lock mup@0.7.7 /Users/fgao/.npm/e2a10439-mup-0-7-7.lock
+33 silly lockFile ee053deb-stry-npmjs-org-mup-mup-0-7-7-tgz https://registry.npmjs.org/mup/-/mup-0.7.7.tgz
+34 verbose lock https://registry.npmjs.org/mup/-/mup-0.7.7.tgz /Users/fgao/.npm/ee053deb-stry-npmjs-org-mup-mup-0-7-7-tgz.lock
+35 verbose addRemoteTarball [ 'https://registry.npmjs.org/mup/-/mup-0.7.7.tgz',
+35 verbose addRemoteTarball   'a71e54450455781298e62584b3a70dd7e94b846f' ]
+36 info retry fetch attempt 1 at 21:57:25
+37 verbose fetch to= /var/folders/40/xl6n2hb51m71q6s6mzml9_ph0000gn/T/npm-42174-WATv8csv/registry.npmjs.org/mup/-/mup-0.7.7.tgz
+38 http GET https://registry.npmjs.org/mup/-/mup-0.7.7.tgz
+39 http 200 https://registry.npmjs.org/mup/-/mup-0.7.7.tgz
+40 silly lockFile ee053deb-stry-npmjs-org-mup-mup-0-7-7-tgz https://registry.npmjs.org/mup/-/mup-0.7.7.tgz
+41 silly lockFile ee053deb-stry-npmjs-org-mup-mup-0-7-7-tgz https://registry.npmjs.org/mup/-/mup-0.7.7.tgz
+42 silly lockFile e2a10439-mup-0-7-7 mup@0.7.7
+43 silly lockFile e2a10439-mup-0-7-7 mup@0.7.7
+44 silly lockFile 49f77549-mup mup@
+45 silly lockFile 49f77549-mup mup@
+46 silly resolved [ { name: 'mup',
+46 silly resolved     version: '0.7.7',
+46 silly resolved     description: 'Production Quality Meteor Deployments',
+46 silly resolved     dependencies:
+46 silly resolved      { nodemiral: '0.3.x',
+46 silly resolved        cjson: '0.3.x',
+46 silly resolved        uuid: '1.4.x',
+46 silly resolved        colors: '0.6.x',
+46 silly resolved        rimraf: '2.x.x',
+46 silly resolved        underscore: '1.7.0' },
+46 silly resolved     bin: { mup: './bin/mup' },
+46 silly resolved     author:
+46 silly resolved      { name: 'Arunoda Susiripala',
+46 silly resolved        email: 'arunoda.susiripala@gmail.com' },
+46 silly resolved     repository: { type: 'git', url: 'git://github.com/arunoda/meteor-up.git' },
+46 silly resolved     license: 'MIT',
+46 silly resolved     gitHead: 'c36c0e9377e6aab7e9717857b3e8edd2fe5a3316',
+46 silly resolved     bugs: { url: 'https://github.com/arunoda/meteor-up/issues' },
+46 silly resolved     homepage: 'https://github.com/arunoda/meteor-up',
+46 silly resolved     _id: 'mup@0.7.7',
+46 silly resolved     scripts: {},
+46 silly resolved     _shasum: 'a71e54450455781298e62584b3a70dd7e94b846f',
+46 silly resolved     _from: 'mup@',
+46 silly resolved     _npmVersion: '1.4.28',
+46 silly resolved     _npmUser: { name: 'arunoda', email: 'arunoda.susiripala@gmail.com' },
+46 silly resolved     maintainers: [ [Object] ],
+46 silly resolved     dist:
+46 silly resolved      { shasum: 'a71e54450455781298e62584b3a70dd7e94b846f',
+46 silly resolved        tarball: 'http://registry.npmjs.org/mup/-/mup-0.7.7.tgz' },
+46 silly resolved     directories: {},
+46 silly resolved     _resolved: 'https://registry.npmjs.org/mup/-/mup-0.7.7.tgz' } ]
+47 info install mup@0.7.7 into /usr/local/lib
+48 info installOne mup@0.7.7
+49 verbose lib/node_modules/mup unbuild
+50 verbose tar unpack /Users/fgao/.npm/mup/0.7.7/package.tgz
+51 silly lockFile de4b26ee-r-usr-local-lib-node-modules-mup tar:///usr/local/lib/node_modules/mup
+52 verbose lock tar:///usr/local/lib/node_modules/mup /Users/fgao/.npm/de4b26ee-r-usr-local-lib-node-modules-mup.lock
+53 silly lockFile f8d8b9d7-s-fgao-npm-mup-0-7-7-package-tgz tar:///Users/fgao/.npm/mup/0.7.7/package.tgz
+54 verbose lock tar:///Users/fgao/.npm/mup/0.7.7/package.tgz /Users/fgao/.npm/f8d8b9d7-s-fgao-npm-mup-0-7-7-package-tgz.lock
+55 silly gunzTarPerm modes [ '755', '644' ]
+56 error Error: EACCES, mkdir '/usr/local/lib/node_modules/mup'
+56 error  { [Error: EACCES, mkdir '/usr/local/lib/node_modules/mup']
+56 error   errno: 3,
+56 error   code: 'EACCES',
+56 error   path: '/usr/local/lib/node_modules/mup',
+56 error   fstream_type: 'Directory',
+56 error   fstream_path: '/usr/local/lib/node_modules/mup',
+56 error   fstream_class: 'DirWriter',
+56 error   fstream_stack:
+56 error    [ '/usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23',
+56 error      '/usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53',
+56 error      'Object.oncomplete (fs.js:108:15)' ] }
+57 error Please try running this command again as root/Administrator.
+58 error System Darwin 14.0.0
+59 error command "node" "/usr/local/bin/npm" "install" "-g" "mup"
+60 error cwd /Users/fgao/Documents/welog
+61 error node -v v0.10.36
+62 error npm -v 1.4.28
+63 error path /usr/local/lib/node_modules/mup
+64 error fstream_path /usr/local/lib/node_modules/mup
+65 error fstream_type Directory
+66 error fstream_class DirWriter
+67 error code EACCES
+68 error errno 3
+69 error stack Error: EACCES, mkdir '/usr/local/lib/node_modules/mup'
+70 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/fstream/lib/dir-writer.js:36:23
+70 error fstream_stack /usr/local/lib/node_modules/npm/node_modules/mkdirp/index.js:46:53
+70 error fstream_stack Object.oncomplete (fs.js:108:15)
+71 verbose exit [ 3, true ]

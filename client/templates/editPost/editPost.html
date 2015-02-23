@@ -1,16 +1,53 @@
 <template name="editPost">
+
   {{#contentFor "headerButtonLeft"}}
-    {{>ionNavBackButton path="index"}}
+    {{>ionNavBackButton path="lists"}}
   {{/contentFor}}
 
   {{#contentFor "headerTitle"}}
-    <h1 class="title">Edit Post</h1>
+    <h1 class="title">Add Post</h1>
   {{/contentFor}}
 
   {{#ionView}}
     {{#ionContent}}
-      {{> quickForm collection="Posts" fields="title, body, published" doc=this id="edit-post" type="update" buttonContent="Save Post"}}
+
+
+      <div >
+        <label type='stacked' class='item item-input item-stacked-label'>
+          <span class='input-label'>Title</span>
+          <input type='text' label-type='stacked' name='title' required value={{title}} />
+        </label>
+      </div>
+      {{#each sections}}
+      {{#if isTypeText}}
+      
+      {{#unless isNotEditMode}}
+      <a data-id={{time}} class='input-label icon ion-close-circled right-x-button '></a>
+      <textarea data-id={{time}} type='text' class='in-edit-mode' rows='4' label-type=''>{{text}}</textarea>
+      {{else}}
+      <a data-id={{time}} class='input-label'></a>
+      
+      <textarea readonly data-id={{time}} type='text' rows='4' class='in-display-mode' label-type=''>{{text}}</textarea>
+      {{/unless}}
+
+    {{/if}}
+      {{#if isTypePic}}
+      <div>
+          <a data-id={{time}} class='input-label icon ion-close-circled right-x-button '></a>
+          <img src="{{picture}}"/>
+      </div>
+      {{/if}}
+      {{/each}}
+      <div class="button-bar">
+        <a class="button icon ion-android-textsms">+</a>
+        <a class="button icon ion-android-camera">+</a>
+        <a class="button icon ion-android-image">+</a>
+        <a class="button icon ion-android-send button-positive">Submit</a>
+      </div>
+      
     {{/ionContent}}
   {{/ionView}}
   
 </template>
+
+
