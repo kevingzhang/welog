@@ -3,10 +3,6 @@
 Template.addpost.helpers
   sections:->
     Session.get 'sections'
-  isTypeText: () ->
-    @type is 'text'
-  isTypePic: () ->
-    @type is 'picture'
 
 Template.addpost.events
   'click a.ion-android-textsms': (e) ->
@@ -16,13 +12,12 @@ Template.addpost.events
     Session.set 'sections', sections
     # ...
   'click a.ion-android-camera': (e) ->
-    console.log 'Took a picture'
-    MeteoricCamera.getPicture {}, (e,r)->
+     MeteoricCamera.getPicture {}, (e,r)->
       if e?
         console.log e.message
       else
         sections = (Session.get 'sections') or []
-        sections.push {type:'picture', time: Date.now(), picture: r}
+        sections.push {type:'picture', time: Date.now(), pic: r}
         Session.set 'sections', sections
      # ...
   'click a.ion-android-image': (e) ->
@@ -36,22 +31,22 @@ Template.addpost.events
 
   'click textarea.in-display-mode':(e)->
     timeString = e.target.getAttribute 'data-id'
-    timeId = parseInt timeString 
+    timeId = parseInt timeString
     sections = Session.get 'sections'
     sections.forEach (s)->
-      if s.time is timeId 
-        s.isNotEditMode = false 
+      if s.time is timeId
+        s.isNotEditMode = false
     Session.set 'sections', sections
 
   'blur textarea.in-edit-mode':(e)->
     text = e.target.value
     timeString = e.target.getAttribute 'data-id'
-    timeId = parseInt timeString 
+    timeId = parseInt timeString
     sections = Session.get 'sections'
     sections.forEach (s)->
-      if s.time is timeId 
+      if s.time is timeId
         s.text = text
-        s.isNotEditMode = true 
+        s.isNotEditMode = true
     Session.set 'sections', sections
 
   'click a.ion-android-send':(e, t)->
@@ -64,7 +59,7 @@ Template.addpost.events
       delete s.isNotEditMode
       return s
     
-    newPost = 
+    newPost =
       title:title
       sections: cleanedSections
       published:true
