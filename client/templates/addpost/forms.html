@@ -1,0 +1,24 @@
+<template name="addpost">
+ 
+  {{#contentFor "headerButtonLeft"}}
+    {{>ionNavBackButton path="index"}}
+  {{/contentFor}}
+
+  {{#contentFor "headerTitle"}}
+    <h1 class="title">New Post</h1>
+  {{/contentFor}}
+   
+  {{#ionView}}
+    {{#ionContent}}
+    <!-- {{#autoForm id="demo" collection="Posts"}}
+  {{> afQuickFields}}
+  <div>
+    <button type="submit">Submit</button>
+  </div>
+{{/autoForm}} -->
+<!-- {{> quickForm  collection="Posts" }} -->
+      {{> quickForm collection="Posts" doc=post id="edit-form" type="insert" fields="title,body,published" buttonContent="Save"}}
+      
+    {{/ionContent}}
+  {{/ionView}} 
+</template>

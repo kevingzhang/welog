@@ -29,3 +29,6 @@ Template.postView.helpers
   
   isTypeText:->
     @type is 'text'
+
+  isTypePic:->
+    @type is 'picture'

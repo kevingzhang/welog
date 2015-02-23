@@ -39,6 +39,9 @@
       {{#if isTypeText}}
       <textarea readonly data-id={{time}} type='text' rows='4' class='in-display-mode' label-type=''>{{text}}</textarea>
       {{/if}}
+      {{#if isTypePic}}
+        <img src="{{picture}}"/>
+      {{/if}}
       
     {{/each}}
     <p>
