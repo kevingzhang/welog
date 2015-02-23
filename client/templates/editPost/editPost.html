@@ -19,7 +19,7 @@
         </label>
       </div>
       {{#each sections}}
-      {{#if isTypeText}}
+      {{#if isTypeText type}}
       
       {{#unless isNotEditMode}}
       <a data-id={{time}} class='input-label icon ion-close-circled right-x-button '></a>
@@ -31,11 +31,13 @@
       {{/unless}}
 
     {{/if}}
-      {{#if isTypePic}}
-      <div>
+      {{#if isTypePic type}}
+        <div class="list card">
           <a data-id={{time}} class='input-label icon ion-close-circled right-x-button '></a>
-          <img src="{{picture}}"/>
-      </div>
+          <div class="item item-image">
+            <img class="full-image" src="{{pic}}"/>
+          </div>
+        </div>
       {{/if}}
       {{/each}}
       <div class="button-bar">
