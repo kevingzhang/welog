@@ -1,4 +1,5 @@
-
+Template.editPost.rendered = ->
+  Session.set 'sections', @data.sections
 
 Template.editPost.helpers
   sections:->
