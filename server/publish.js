@@ -14,7 +14,7 @@ Meteor.publishComposite('Posts', {
                 // since this function should return a cursor.
                 return Meteor.users.find(
                     { _id: post.authorId },
-                    { fields: { createdAt: 1, username: 1, picture: 1 } });
+                    { fields: { createdAt: 1, username: 1, emails: 1, picture: 1 } });
             }
         },
     ]
@@ -37,7 +37,7 @@ Meteor.publishComposite('post', function(postId){
                     // since this function should return a cursor.
                     return Meteor.users.find(
                         { _id: post.authorId },
-                        { fields: { createdAt: 1, username: 1, picture: 1 } });
+                        { fields: { createdAt: 1, username: 1, emails: 1, picture: 1 } });
                 }
             },
         ]
