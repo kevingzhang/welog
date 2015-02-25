@@ -31,8 +31,6 @@ Router.map ->
     data: ->
       Posts.findOne @params._id
 
-  @route 'actionSheet'
   @route 'addPost'
-  @route 'loading'
   @route 'sideMenu'
   @route 'userAccounts'
