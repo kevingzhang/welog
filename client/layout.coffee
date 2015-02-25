@@ -6,7 +6,7 @@ Template.layout.events
 		t.ActionSheetButtons = []
 			
 		if Meteor.user()?
-			t.ActionSheetButtons.push {actionId:'addpost', text: 'New Post <i class="icon ion-ios-compose"></i>'}
+			t.ActionSheetButtons.push {actionId:'addPost', text: 'New Post <i class="icon ion-ios-compose"></i>'}
 			t.ActionSheetButtons.push {actionId:'logout', text: 'Logout <i class="icon ion-log-out"></i>'}
 		else
 			t.ActionSheetButtons.push {actionId:'login', text: 'Login <i class="icon ion-log-in"></i>'}
@@ -20,7 +20,7 @@ Template.layout.events
 			cancel: -> 
 			buttonClicked: (index)->
 				switch t.ActionSheetButtons[index]?.actionId
-					when 'addpost' then Router.go 'addpost'
+					when 'addPost' then Router.go 'addPost'
 					when 'logout' 
 						Meteor.logout ->
 							toastr.success 'Logged out'
