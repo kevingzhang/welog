@@ -15,10 +15,6 @@ Router.map ->
       Meteor.subscribe 'postsForList'
       return
 
-  @route 'forms',
-    data: ->
-      post: Posts.find().fetch()[0]
-
   @route 'postView',
     path: '/postView/:_id'
     subscriptions: ->
