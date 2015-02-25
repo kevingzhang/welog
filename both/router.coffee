@@ -12,7 +12,7 @@ Router.map ->
   @route 'lists',
     path: '/'
     subscriptions: ->
-      Meteor.subscribe 'Posts'
+      Meteor.subscribe 'postsForList'
       return
 
   @route 'forms',
@@ -22,7 +22,7 @@ Router.map ->
   @route 'postView',
     path: '/postView/:_id'
     subscriptions: ->
-      Meteor.subscribe 'post', @params._id
+      Meteor.subscribe 'postForView', @params._id
       return
     data: ->
       Posts.findOne @params._id
@@ -30,7 +30,7 @@ Router.map ->
   @route 'editPost',
     path: '/editPost/:_id'
     subscriptions: ->
-      Meteor.subscribe 'post', @params._id
+      Meteor.subscribe 'postForView', @params._id
       return
     data: ->
       Posts.findOne @params._id
