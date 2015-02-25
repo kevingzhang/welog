@@ -1,15 +1,11 @@
-
 @Posts = new Mongo.Collection 'posts'
 
-
-
-Posts.attachSchema new SimpleSchema 
+Posts.attachSchema new SimpleSchema
   title: 
     type: String
     max: 200
     autoform: 
       'label-type': 'stacked'
-    
 
   'sections.$.type':
     type:String
@@ -27,15 +23,12 @@ Posts.attachSchema new SimpleSchema
     type:Number
     optional:true 
 
-  
-
   published: 
     type: Boolean
     defaultValue: true
     autoform: 
       type: 'toggle'
-    
-  
+
   time:
     type: Date
     autoValue: ->
@@ -44,8 +37,6 @@ Posts.attachSchema new SimpleSchema
       else
         @unset()
       
-
-  
   authorId:
     type: String
     autoValue: ->
@@ -54,8 +45,3 @@ Posts.attachSchema new SimpleSchema
       
       if this.isInsert
         return @userId
-      
-      
-    
-  
-

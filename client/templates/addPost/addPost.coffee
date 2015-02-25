@@ -1,10 +1,8 @@
-
-
-Template.addpost.helpers
+Template.addPost.helpers
   sections:->
     Session.get 'sections'
 
-Template.addpost.events
+Template.addPost.events
   'click a.ion-android-textsms': (e) ->
     sections = (Session.get 'sections') or []
 
