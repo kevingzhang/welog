@@ -1,27 +1,21 @@
 <template name="lists">
 
   {{#contentFor "headerButtonLeft"}}
-    
   {{/contentFor}}
   
   {{#contentFor "headerTitle"}}
     <h1 class="title">Welog</h1>
   {{/contentFor}}
 
-
   {{#contentFor "headerButtonRight"}}
-
-
-  <button class="button button-clear" id="showProfileMenu">
-    {{#if currentUser}}
+    <button class="button button-clear" id="showProfileMenu">
+      {{#if currentUser}}
         Hi, {{currentUser.username}} <i class="icon ion-ios-person"></i>
-    {{else}}
+      {{else}}
         <i class="icon ion-ios-person-outline"></i>
-    {{/if}}
-  </button>
-
+      {{/if}}
+    </button>
   {{/contentFor}}
-
 
   {{#ionView}}
     {{#ionContent}}
