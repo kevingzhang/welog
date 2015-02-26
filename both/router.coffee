@@ -1,5 +1,6 @@
 Router.configure
   layoutTemplate: 'layout'
+  loadingTemplate: 'loading'
 
 Meteor.startup ->
   if Meteor.isClient
@@ -34,3 +35,4 @@ Router.map ->
   @route 'addPost'
   @route 'sideMenu'
   @route 'userAccounts'
+  @route 'loading'
