@@ -45,3 +45,16 @@ Posts.attachSchema new SimpleSchema
       
       if this.isInsert
         return @userId
+
+  'likes.$.authorId':
+    type:String
+    autoValue: ->
+      if @isUpdate
+        return
+
+      if this.isInsert
+        return @userId
+
+  'likes.$.time':
+    type:Number
+    optional:true
