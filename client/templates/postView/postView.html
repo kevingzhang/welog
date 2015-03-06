@@ -36,8 +36,15 @@
 
     {{#ionItem class="item-body"}}
     {{#each sections}}
-      {{#if isTypeText}}
+      {{#if isTypeText type}}
       <textarea readonly data-id={{time}} type='text' rows='4' class='in-display-mode' label-type=''>{{text}}</textarea>
+      {{/if}}
+      {{#if isTypePic type}}
+        <div class="list card">
+          <div class="item item-image">
+            <img class="full-image" src="{{pic}}"/>
+          </div>
+        </div>
       {{/if}}
       
     {{/each}}

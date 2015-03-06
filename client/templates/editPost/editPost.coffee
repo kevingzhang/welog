@@ -1,11 +1,9 @@
-
+Template.editPost.rendered = ->
+  Session.set 'sections', @data.sections
 
 Template.editPost.helpers
   sections:->
     Session.get 'sections'
-  isTypeText: () ->
-    @type is 'text'
-    # ...
 
 Template.editPost.events
   'click a.ion-android-textsms': (e) ->
